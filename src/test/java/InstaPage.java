@@ -10,7 +10,7 @@ public class InstaPage {
 
     private WebDriver driver;
 
-    private String Page_url="http://instagram.com";
+    private String Page_url = "http://instagram.com";
     //Locators
 
     @FindBy(name = "username")
@@ -30,16 +30,22 @@ public class InstaPage {
         // Init
 
         PageFactory.initElements(driver, this);
+
     }
-    public void Set_User_Login(String Login){
+
+    public void Set_User_Login(String Login) {
         UserName.clear();
         UserName.sendKeys(Login);
     }
-    public void Set_User_Passwprd(String passwprd){
+
+    public void Set_User_Passwprd(String passwprd) {
         Password.clear();
         Password.sendKeys(passwprd);
     }
-    public void ClickLogin(){
+
+    public void ClickLogin() {
         Login_Btn.click();
     }
+
+
 }
