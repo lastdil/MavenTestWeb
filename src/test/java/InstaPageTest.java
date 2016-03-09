@@ -1,13 +1,17 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
 
 /**
  * Created by Administrator on 17.02.2016.
  */
 public class InstaPageTest {
+
 
     WebDriver driver;
 
@@ -15,17 +19,24 @@ public class InstaPageTest {
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "browsers/chromedriver.exe");
         driver = new ChromeDriver();
+
     }
         @Test
-        public void logIN(){
+        public void  logIN(){
             InstaPage page = new InstaPage(driver);
             driver.get("http://instagram.com");
-            page.Set_User_Login("lastdil");
+            page.Set_User_Login("");
             page.Set_User_Passwprd("");
             page.ClickLogin();
+            Assert.assertEquals("Instagram", driver.getTitle());
 
         }
 
 
-}
+        }
+
+
+
+
+
 
