@@ -43,8 +43,8 @@
                 <version>2.19.1</version>
                 <configuration>
                     <includes>
-                        <include>InstaPageTest.java</include>
-                        <include>hren.GoogleTest</include>
+                        <include>GmailLogPageTest</include>
+
                     </includes>
                 </configuration>
             </plugin>
