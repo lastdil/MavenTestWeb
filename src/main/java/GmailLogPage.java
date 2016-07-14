@@ -4,7 +4,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
 public class GmailLogPage {
     private WebDriver driver;
 
@@ -23,7 +22,6 @@ public class GmailLogPage {
 
     @FindBy(id = "PersistentCookie")
     private WebElement StaySignedInCheckbox;
-
 
 
     @FindBy(id = "signIn")
@@ -46,19 +44,21 @@ public class GmailLogPage {
 
     }
 
-    public void Next(){
+    public void Next() {
         NextBtn.click();
     }
+
     public void SetUserPwd(String password) {
-       // UserPassword.clear();
+        // UserPassword.clear();
         UserPassword.sendKeys(password);
 
     }
-    public void SetCheckBox(){
+
+    public void SetCheckBox() {
         StaySignedInCheckbox.click();
     }
 
-    public void SingIn(){
+    public void SingIn() {
         SingIn.click();
     }
 

@@ -4,7 +4,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
 public class GmailMainPage {
     private WebDriver driver;
     //Locators
@@ -51,28 +50,34 @@ public class GmailMainPage {
 
         PageFactory.initElements(driver, this);
     }
-        public void CreateNewMail(){
 
-            ComposeMail.click();
-        }
-        public void EnterRecepient(String recepient){
+    public void CreateNewMail() {
 
-            Recepient.sendKeys(recepient);
-        }
-        public void EnterSubject(String subject){
+        ComposeMail.click();
+    }
+
+    public void EnterRecepient(String recepient) {
+
+        Recepient.sendKeys(recepient);
+    }
+
+    public void EnterSubject(String subject) {
         Subject.sendKeys(subject);
     }
-        public void SendMail(){
-            SendMail.click();
-        }
 
-    public void Refresh(){
+    public void SendMail() {
+        SendMail.click();
+    }
+
+    public void Refresh() {
         Refresh.click();
     }
-    public void Select(){
+
+    public void Select() {
         SelectArrow.click();
     }
-    public void Unread(){
+
+    public void Unread() {
         Unread.click();
     }
 }

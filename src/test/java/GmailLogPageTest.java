@@ -33,20 +33,20 @@ public class GmailLogPageTest {
         Thread.sleep(1000);
     }
 
-        @Test
-        public void ComposeMail() throws Exception{
-            GmailMainPage page1 = new GmailMainPage(driver);
-            page1.CreateNewMail();
-            //enter details
-            page1.EnterRecepient("idrygin@gmail.com");
-            page1.EnterSubject("its works!");
-            page1.SendMail();
-            page1.Refresh();
-        }
+    @Test
+    public void ComposeMail() throws Exception {
+        GmailMainPage page1 = new GmailMainPage(driver);
+        page1.CreateNewMail();
+        //enter details
+        page1.EnterRecepient("idrygin@gmail.com");
+        page1.EnterSubject("its works!");
+        page1.SendMail();
+        page1.Refresh();
+    }
 
-        @AfterTest
-            public void TearDown() throws Exception {
-            driver.quit();
-        }
+    @AfterTest
+    public void TearDown() throws Exception {
+        driver.quit();
+    }
 
 }
