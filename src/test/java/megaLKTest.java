@@ -11,12 +11,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class megaLKTest {
     WebDriver driver;
+    private static final String login = "9210000000";
+    private static final String pwd = "yourPWD123";
 
     @BeforeTest
     public void setup() throws Exception {
         System.setProperty("webdriver.chrome.driver", "browsers/chromedriver");
         driver = new ChromeDriver();
-        MegafonLkpage page = new MegafonLkpage(driver);
         driver.get("https://lk.megafon.ru/login/");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Thread.sleep(1000);
@@ -24,14 +25,14 @@ public class megaLKTest {
 
     @Test
     public void login() throws Exception {
-        MegafonLkpage page1 = new MegafonLkpage(driver);
-        page1.SetLogin("9210000000");
-        page1.SetUserPwd("yourPWD123");
-        page1.SingIn();
+        MegafonLkpage page = new MegafonLkpage(driver);
+        page.SetLogin(login);
+        page.SetUserPwd(pwd);
+        page.SingIn();
     }
 
-//    @AfterTest
-//    public void TearDown() throws Exception {
-//        driver.quit();
-//    }
+/*    @AfterTest
+    public void TearDown() throws Exception {
+        driver.quit();
+    }*/
 }
